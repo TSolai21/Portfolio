@@ -7,10 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#1e1e1e",
+        secondary: "#252627",
+        accent: "#08fdd8",
+        grey: "#6a6a6a",
+      },
+
+      fontFamily: {
+        cursive: "'La Belle Aurore', cursive",
       },
     },
   },
