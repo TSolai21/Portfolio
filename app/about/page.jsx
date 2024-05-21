@@ -19,13 +19,13 @@ const page = () => {
           <div className="flex flex-col h-full  w-1/2">
             <h1 className="text-accent text-4xl">About Me</h1>
             <p className="text-white font-mono text-xl mt-2 ">
-              I'm Solaikumar, a Front-End Developer who loves making websites
-              that people enjoy using. With 2 years of experience, I'm really
-              good with HTML, CSS, and JavaScript – the building blocks of the
-              web. I also know my way around React, Angular, and Next.js, which
-              are like special tools for making websites even cooler. My goal is
-              to create websites that are easy to use and look great, so
-              everyone has a great time surfing the web.
+              I&apos;m Solaikumar, a Front-End Developer who loves making
+              websites that people enjoy using. With 2 years of experience,
+              I&apos;m really good with HTML, CSS, and JavaScript the building
+              blocks of the web. I also know my way around React, Angular, and
+              Next.js, which are like special tools for making websites even
+              cooler. My goal is to create websites that are easy to use and
+              look great, so everyone has a great time surfing the web.
             </p>
             <Link
               href={"/"}

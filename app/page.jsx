@@ -20,7 +20,7 @@ const Home = () => {
             </p>
             <h1 className="text-white text-8xl">
               Hi, <br />
-              I'm Solaikumar, <br /> web developer.
+              I&apos;m Solaikumar, <br /> web developer.
             </h1>
             <p className=" text-grey text-xl">Front End Developer </p>
             <Link

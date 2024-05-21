@@ -10,8 +10,8 @@ const page = () => {
         <h1 className="text-accent  text-4xl">Expertise</h1>
         <div className="flex items-center  mt-5 gap-5 flex-wrap">
           {skills.length &&
-            skills.map((res) => {
-              return <Skill image={res.image} skill={res.skill} />;
+            skills.map((res, i) => {
+              return <Skill key={i} image={res.image} skill={res.skill} />;
             })}
         </div>
       </main>
