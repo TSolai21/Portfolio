@@ -3,11 +3,14 @@ import Skill from "@/components/Skill";
 import { skills } from "@/helpers/skillsData";
 import React from "react";
 const page = () => {
-  console.log(skills);
   return (
     <>
       <main className="h-full w-full p-[9vw] z-10 relative">
-        <h1 className="text-accent  text-4xl">Expertise</h1>
+        <div className="relative w-max ">
+          <h1 className="text-white text-4xl after:h-1 after:w-4/5  hover:after:w-full after:transition-all after:absolute after:bg-accent after:-bottom-1 after:left-0 content-['']">
+            Expertise
+          </h1>
+        </div>
         <div className="flex items-center  mt-5 gap-5 flex-wrap">
           {skills.length &&
             skills.map((res, i) => {

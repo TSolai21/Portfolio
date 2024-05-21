@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       <main className="h-full w-full p-[9vw] relative z-10">
-        <div className="flex justify-start  gap-16 ">
+        <div className="flex justify-end flex-row-reverse gap-16 ">
           <div className="  relative after:rounded-xl after:bg-accent  after:content-[''] after:absolute after:block  after:h-full after:w-full after:top-[5%] after:-z-10 z-[20] after:right-[-10%] ">
             <Image
               src={solai}
@@ -17,8 +17,15 @@ const page = () => {
             />
           </div>
           <div className="flex flex-col h-full  w-1/2">
-            <h1 className="text-accent text-4xl">About Me</h1>
-            <p className="text-white font-mono text-xl mt-2 ">
+            <div
+              className=" relative w-max
+            "
+            >
+              <h1 className="text-white text-4xl after:h-1 after:w-4/5  hover:after:w-full after:transition-all after:absolute after:bg-accent after:-bottom-1 after:left-0 content-['']">
+                About Me
+              </h1>
+            </div>
+            <p className="text-white font-mono text-xl mt-3 ">
               I&apos;m Solaikumar, a Front-End Developer who loves making
               websites that people enjoy using. With 2 years of experience,
               I&apos;m really good with HTML, CSS, and JavaScript the building

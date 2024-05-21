@@ -13,6 +13,7 @@ import responsiveImage from "../public/images/resposiveness.webp";
 import reduxImage from "../public/images/redux.webp";
 import gitImage from "../public/images/git.webp";
 import githubImage from "../public/images/github.webp";
+import angularImage from "../public/images/angular.webp";
 
 export const imagesSources = {
   htmlImage,
@@ -30,4 +31,5 @@ export const imagesSources = {
   reduxImage,
   gitImage,
   githubImage,
+  angularImage,
 };

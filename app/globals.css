@@ -10,6 +10,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+:root {
+  --accent-color: #08fdd8;
+}
 
 html {
   @apply text-[60%] sm:text-[65%] md:text-[75%]  2xl:text-[100%];
