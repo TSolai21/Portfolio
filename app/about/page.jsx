@@ -1,22 +1,13 @@
 import Image from "next/image";
-import solai from "@/public/images/solai.jpg";
+import solai from "@/public/images/solai.png";
 import Link from "next/link";
 import Particle from "@/components/Particle";
 const page = () => {
   return (
     <>
-      <main className="h-full w-full p-[9vw] relative z-10">
-        <div className="flex justify-end flex-row-reverse gap-16 ">
-          <div className="  relative after:rounded-xl after:bg-accent  after:content-[''] after:absolute after:block  after:h-full after:w-full after:top-[5%] after:-z-10 z-[20] after:right-[-10%] ">
-            <Image
-              src={solai}
-              height={250}
-              width={250}
-              alt="solai image"
-              className=" rounded-xl"
-            />
-          </div>
-          <div className="flex flex-col h-full  w-1/2">
+      <main className="h-full w-full p-[9vw] flex justify-center items-center  z-10 ">
+        <div className="flex  w-[90%] justify-between  flex-col-reverse md:flex-row relative  gap-16 bg-secondary p-10 rounded-xl ">
+          <div className="flex flex-col h-full  w-full  md:w-3/5">
             <div
               className=" relative w-max
             "
@@ -37,10 +28,19 @@ const page = () => {
             <Link
               href={"/"}
               download
-              className=" border rounded-md text-accent text-xl p-1 w-[8vw] mt-8 border-accent hover:bg-accent hover:text-primary transition text-center"
+              className=" border rounded-md text-accent text-xl p-1 min-w-[8em] w-[8vw] mt-8 border-accent hover:bg-accent hover:text-primary transition text-center"
             >
               Download CV
             </Link>
+          </div>
+          <div className=" w-[15vw]  min-w-40 !max-h-90  relative border-[15px] border-l-0 border-t-0  border-accent  rounded-full  overflow-hidden ">
+            <Image
+              src={solai}
+              height={"auto"}
+              width={"auto"}
+              alt="solai image"
+              className=" rounded-xl block object-contain grayscale	"
+            />
           </div>
         </div>
       </main>

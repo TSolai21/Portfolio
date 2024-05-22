@@ -18,27 +18,27 @@ const Header = () => {
   const navigations = [
     {
       name: "Home",
-      icon: <FaHome size={"1.7vw"} />,
+      icon: <FaHome className=" size-8" />,
       to: "/",
     },
     {
       name: "about",
-      icon: <FaRegUser size={"1.7vw"} />,
+      icon: <FaRegUser className=" size-8" />,
       to: "/about",
     },
     {
       name: "Skills",
-      icon: <FaCode size={"1.7vw"} />,
+      icon: <FaCode className=" size-8" />,
       to: "/skills",
     },
     {
       name: "Projects",
-      icon: <CgWebsite size={"1.7vw"} />,
+      icon: <CgWebsite className=" size-8" />,
       to: "/projects",
     },
     {
-      name: "Home",
-      icon: <MdContacts size={"1.7vw"} />,
+      name: "Contact",
+      icon: <MdContacts className=" size-8" />,
       to: "/contact",
     },
   ];
@@ -46,12 +46,12 @@ const Header = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      icon: <FaLinkedinIn size={"1.3vw"} />,
+      icon: <FaLinkedinIn className=" size-6" />,
       to: "https://www.linkedin.com/in/solaikumart21/",
     },
     {
       name: "GitHub",
-      icon: <FaGithub size={"1.3vw"} />,
+      icon: <FaGithub className=" size-6" />,
       to: "https://github.com/TSolai21",
     },
   ];
@@ -68,7 +68,7 @@ const Header = () => {
   }, [accent]);
   return (
     <>
-      <header className=" bg-secondary w-[4vw] flex flex-col justify-between items-center pb-5 h-full z-10 relative">
+      <header className=" bg-secondary w-50 flex flex-col justify-between items-center pb-5 h-full z-10 relative">
         <Link href={"/"}>
           <div className=" size-20">
             <Image
@@ -110,7 +110,11 @@ const Header = () => {
           {socialLinks.map((res, i) => {
             return (
               <li key={i}>
-                <Link href={""} className=" text-gray-500 hover:text-accent">
+                <Link
+                  target="_blank"
+                  href={res.to}
+                  className=" text-gray-500 hover:text-accent"
+                >
                   {res.icon}
                 </Link>
               </li>

@@ -48,7 +48,7 @@ export const skills = [
     image: imagesSources.angularImage,
   },
   {
-    skill: "Responsive Design",
+    skill: "Responsiveness  ",
     image: imagesSources.responsiveImage,
   },
   {
