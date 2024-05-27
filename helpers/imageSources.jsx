@@ -14,6 +14,7 @@ import reduxImage from "../public/images/redux.webp";
 import gitImage from "../public/images/git.webp";
 import githubImage from "../public/images/github.webp";
 import angularImage from "../public/images/angular.webp";
+import portfolio1 from "../public/images/portfolio1.png";
 
 export const imagesSources = {
   htmlImage,
@@ -32,4 +33,5 @@ export const imagesSources = {
   gitImage,
   githubImage,
   angularImage,
+  portfolio1,
 };

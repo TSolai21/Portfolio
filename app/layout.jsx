@@ -22,7 +22,17 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         <div className="app bg-primary h-[100vh] w-full flex">
-          <div className=" z-1 relative h-full">
+          <input id="toggler" type="checkbox" className="peer hidden" />
+          <label
+            htmlFor="toggler"
+            className="sm:hidden  text-red-500 text-5xl p-2   fixed top-8 right-8 z-[99999]  flex flex-col gap-2"
+          >
+            <span className="h-1 w-14 bg-accent"></span>
+            <span className="h-1 w-10 bg-accent"></span>
+            <span className="h-1 w-14 bg-accent"></span>
+          </label>
+
+          <div className=" z-[9999] sm:z-1  h-full absolute sm:relative -translate-x-[100%] sm:translate-x-0 peer-checked:translate-x-0 transition-all">
             <Header />
           </div>
           {children}
