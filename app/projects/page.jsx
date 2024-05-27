@@ -11,8 +11,8 @@ const page = () => {
           </h1>
         </div>
         <div className="flex  h-full  mt-5 gap-5 flex-wrap overflow-auto pb-8">
-          {portfolio.map(({ name, link, image }) => {
-            return <PortfolioCard image={image} link={link} />;
+          {portfolio.map(({ name, link, image, i }) => {
+            return <PortfolioCard key={i} image={image} link={link} />;
           })}
         </div>
       </main>
