@@ -2,7 +2,7 @@ import Image from "next/image";
 import solai from "@/public/images/solai.png";
 import Link from "next/link";
 import Particle from "@/components/Particle";
-const page = () => {
+const Page = () => {
   return (
     <>
       <main className="h-full w-full sm:p-20  p-10  z-10  overflow-auto">
@@ -45,4 +45,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

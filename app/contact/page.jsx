@@ -8,7 +8,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 
-const page = () => {
+const Page = () => {
   const schema = yup.object().shape({
     name: yup.string().required("Please enter your name"),
     email: yup
@@ -118,4 +118,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

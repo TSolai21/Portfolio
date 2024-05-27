@@ -4,7 +4,7 @@ import Skill from "@/components/Skill";
 import { skills } from "@/helpers/skillsData";
 import React from "react";
 import { motion } from "framer-motion";
-const page = () => {
+const Page = () => {
   return (
     <>
       <main className="h-full w-full sm:p-20 p-12  overflow-hidden  z-10 relative">
@@ -29,4 +29,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

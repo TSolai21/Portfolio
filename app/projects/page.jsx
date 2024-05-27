@@ -1,7 +1,7 @@
 import React from "react";
 import { portfolio } from "@/helpers/Portfolio";
 import PortfolioCard from "@/components/PortfolioCard";
-const page = () => {
+const Page = () => {
   return (
     <>
       <main className="h-full w-full sm:p-20 p-12  overflow-hidden  z-10 relative">
@@ -20,4 +20,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
