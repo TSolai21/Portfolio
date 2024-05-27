@@ -1,7 +1,10 @@
+"use client";
+
 import Button from "@/components/Button";
 import Particle from "@/components/Particle";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -16,7 +19,15 @@ const Home = () => {
               &lt;body&gt;
             </p>
           </div>
-          <div className="content ml-10 flex-grow flex flex-col  justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              delay: 1.8,
+            }}
+            className="content ml-10 flex-grow flex flex-col  justify-center"
+          >
             <p className=" text-grey font-cursive ml-2 text-3xl sm:text-2xl mb-4">
               &lt;content&gt;
             </p>
@@ -37,7 +48,7 @@ const Home = () => {
             <p className=" text-grey font-cursive ml-2 text-3xl sm:text-2xl mt-4">
               &lt;/content&gt;
             </p>
-          </div>
+          </motion.div>
 
           <div className="">
             <p className=" text-grey font-cursive ml-2 text-3xl sm:text-2xl">

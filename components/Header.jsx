@@ -68,7 +68,7 @@ const Header = () => {
   }, [accent]);
   return (
     <>
-      <header className=" bg-secondary w-50 flex flex-col justify-between items-center pb-5 h-full z-10 relative">
+      <header className=" bg-secondary w-full flex flex-col justify-between items-center pb-5 h-full z-10 relative">
         <Link href={"/"}>
           <div className=" size-20">
             <Image

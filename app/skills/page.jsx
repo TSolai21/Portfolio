@@ -1,7 +1,9 @@
+"use client";
 import Particle from "@/components/Particle";
 import Skill from "@/components/Skill";
 import { skills } from "@/helpers/skillsData";
 import React from "react";
+import { motion } from "framer-motion";
 const page = () => {
   return (
     <>
@@ -11,12 +13,17 @@ const page = () => {
             My Skills
           </h1>
         </div>
-        <div className="flex items-center h-full  mt-5 gap-5 flex-wrap overflow-auto pb-8">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", delay: 1.5, staggerChildren: 0.04 }}
+          className="flex justify-start  h-full  mt-5 gap-5 flex-wrap overflow-auto pb-8"
+        >
           {skills.length &&
             skills.map((res, i) => {
               return <Skill key={i} image={res.image} skill={res.skill} />;
             })}
-        </div>
+        </motion.div>
       </main>
     </>
   );

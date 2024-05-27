@@ -1,9 +1,91 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import Link from "next/link";
 
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+
 const page = () => {
+  // const schema = yup.object().shape({
+  //   name: yup.string().required("Please enter your name"),
+  //   email: yup
+  //     .string()
+  //     .email("Please enter valid email")
+  //     .required("Please enter your email"),
+  //   message: yup.string().required("Please enter your message"),
+  // });
+
+  // const { handleSubmit, register, formState } = useForm({
+  //   resolver: yupResolver(schema),
+  //   mode: "onSubmit",
+  // });
+
+  // const sendMail = useCallback(async (data) => {
+  //   try {
+  //     const res = await fetch("/api/sendMail", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+
+  //     if (!res.ok) {
+  //       throw new Error("Failed to send message");
+  //     }
+
+  //     console.log(await res.json());
+  //   } catch (e) {
+  //     console.log(e.message);
+  //   }
+  // }, []);
+
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   if (formState.isValid && formState.isSubmitted && data) {
+  //     // sendMail(data);
+  //   }
+  // }, [formState, data, sendMail]);
+
+  const schema = yup.object().shape({
+    name: yup.string().required("Please enter your name"),
+    email: yup
+      .string()
+      .email("Please enter valid email")
+      .required("Please enter your email"),
+    message: yup.string().required("Please enter your message"),
+  });
+  const { handleSubmit, register, formState, reset } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onSubmit",
+  });
+
+  const sendMail = async (data) => {
+    try {
+      const res = await fetch("api/sendMail", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+      console.log(await res.json());
+      setTimeout(() => {
+        reset();
+      }, 1000);
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+  const [data, setData] = useState("");
+  useEffect(() => {
+    if (formState.isValid && formState.isSubmitted) {
+      console.log(data);
+      sendMail(data);
+    }
+  }, [formState]);
   return (
     <>
       <main className="h-full w-full sm:p-20 p-12  overflow-hidden  z-10 relative">
@@ -12,22 +94,41 @@ const page = () => {
             Contact me
           </h1>
         </div>
-        <div className="flex h-full flex-col-reverse sm:flex-row  mt-5 gap-5 overflow-auto pb-8">
-          <form className=" flex flex-col gap-5 sm:w-1/2 w-full h-full">
+        <div className="flex h-full w-full flex-col-reverse sm:flex-row  mt-5 gap-5 overflow-auto pb-8">
+          <form
+            className=" flex flex-col gap-5 sm:w-1/2 w-full h-full"
+            onSubmit={handleSubmit((data) => setData(data))}
+          >
             <input
+              {...register("name")}
               type="text"
               placeholder="Name"
-              className="p-3 text-xl bg-secondary outline-none text-accent"
+              className={`p-3 text-xl bg-secondary outline-none text-accent border-b ${
+                formState?.errors?.name?.message
+                  ? " border-red-500"
+                  : "border-transparent"
+              }`}
             />
             <input
+              {...register("email")}
               type="email"
               placeholder="Email"
-              className="p-3 text-xl bg-secondary outline-none text-accent"
+              className={`p-3 text-xl bg-secondary outline-none text-accent border-b ${
+                formState?.errors?.email?.message
+                  ? " border-red-500"
+                  : "border-transparent"
+              }`}
             />
             <textarea
+              {...register("message")}
               placeholder="Message"
-              className="p-3 text-xl bg-secondary outline-none text-accent flex-grow"
+              className={`p-3 text-xl bg-secondary outline-none text-accent  flex-grow border-b ${
+                formState?.errors?.message?.message
+                  ? " border-red-500"
+                  : "border-transparent"
+              }`}
             ></textarea>
+
             <div className="w-full flex justify-end mt-5">
               <button
                 type="submit"
@@ -46,7 +147,7 @@ const page = () => {
               <span>+919629192376</span>
             </Link>
             <Link
-              href="mailTo:solaikumar.t@mgail.com"
+              href="mailTo:solaikumar.t@gmail.com"
               className="flex  text-accent items-center gap-3 text-xl mt-5 "
             >
               <IoIosMail className=" size-8 text-white" />
