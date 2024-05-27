@@ -9,48 +9,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 
 const page = () => {
-  // const schema = yup.object().shape({
-  //   name: yup.string().required("Please enter your name"),
-  //   email: yup
-  //     .string()
-  //     .email("Please enter valid email")
-  //     .required("Please enter your email"),
-  //   message: yup.string().required("Please enter your message"),
-  // });
-
-  // const { handleSubmit, register, formState } = useForm({
-  //   resolver: yupResolver(schema),
-  //   mode: "onSubmit",
-  // });
-
-  // const sendMail = useCallback(async (data) => {
-  //   try {
-  //     const res = await fetch("/api/sendMail", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(data),
-  //     });
-
-  //     if (!res.ok) {
-  //       throw new Error("Failed to send message");
-  //     }
-
-  //     console.log(await res.json());
-  //   } catch (e) {
-  //     console.log(e.message);
-  //   }
-  // }, []);
-
-  // const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   if (formState.isValid && formState.isSubmitted && data) {
-  //     // sendMail(data);
-  //   }
-  // }, [formState, data, sendMail]);
-
   const schema = yup.object().shape({
     name: yup.string().required("Please enter your name"),
     email: yup
@@ -85,7 +43,7 @@ const page = () => {
       console.log(data);
       sendMail(data);
     }
-  }, [formState]);
+  }, [formState, data, sendMail]);
   return (
     <>
       <main className="h-full w-full sm:p-20 p-12  overflow-hidden  z-10 relative">
