@@ -43,7 +43,7 @@ const page = () => {
       console.log(data);
       sendMail(data);
     }
-  }, [formState, data, sendMail]);
+  }, [formState, data]);
   return (
     <>
       <main className="h-full w-full sm:p-20 p-12  overflow-hidden  z-10 relative">
