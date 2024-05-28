@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const PageAnimation = ({ children }) => {
   const pathname = usePathname();
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="">
       <div key={pathname} className="w-full h-full flex-grow">
         <motion.div
           className=" h-screen w-screen fixed inset-0  z-20   bg-primary pointer-events-none"

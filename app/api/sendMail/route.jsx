@@ -9,6 +9,9 @@ export async function POST(req) {
       host: "smtp.gmail.com",
       port: 587,
       secure: false, // Use `true` for port 465, `false` for all other ports
+      tls: {
+        ciphers: "SSLv3",
+      },
       auth: {
         user: process.env.USER,
         pass: process.env.APP_PASSWORD,
@@ -19,6 +22,7 @@ export async function POST(req) {
       from: process.env.USER,
       to: process.env.USER,
       subject: "New Mail from Portfolio",
+      text: "",
       html: `
           <h3>Hello Kumar</h3>
           <p>You have a message from ${name}</p>
@@ -32,8 +36,8 @@ export async function POST(req) {
         address: process.env.USER,
       },
       to: email,
-      subject: "New Mail from Portfolio",
-      //   text: message,
+      subject: "New Mail from Solaikumar",
+      text: "",
       html: `
         <h3>Hello ${name}</h3>
         <p> Thanks for contacting me ,Will get back to you soon</p> 

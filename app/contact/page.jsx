@@ -52,7 +52,30 @@ const Page = () => {
             Contact me
           </h1>
         </div>
-        <div className="flex h-full w-full flex-col-reverse sm:flex-row  mt-5 gap-5 overflow-auto pb-8">
+        <div className="flex h-full w-full flex-col sm:flex-row  mt-5 gap-5 overflow-auto pb-8">
+          <div className=" sm:w-1/2 w-full">
+            <p className="text-xl text-white mb-3 sm:w-4/5">
+              Feel free to reach out to me for any inquiries, collaborations, or
+              project discussions. I am always open to exploring new
+              opportunities and connecting with like-minded professionals.
+              Whether you have a question or just want to say hello, I'd love to
+              hear from you. Let's work together to create something amazing!
+            </p>
+            <Link
+              href="tel:+919629192376"
+              className="flex items-center text-accent gap-3 text-xl"
+            >
+              <IoCall className=" size-8 text-white" />
+              <span>+919629192376</span>
+            </Link>
+            <Link
+              href="mailTo:solaikumar.t@gmail.com"
+              className="flex  text-accent items-center gap-3 text-xl mt-5 "
+            >
+              <IoIosMail className=" size-8 text-white" />
+              <span>Solaikumar.t@gmail.com</span>
+            </Link>
+          </div>
           <form
             className=" flex flex-col gap-5 sm:w-1/2 w-full h-full"
             onSubmit={handleSubmit((data) => setData(data))}
@@ -96,22 +119,6 @@ const Page = () => {
               </button>
             </div>
           </form>
-          <div className=" sm:w-1/2 w-full">
-            <Link
-              href="tel:+919629192376"
-              className="flex items-center text-accent gap-3 text-xl"
-            >
-              <IoCall className=" size-8 text-white" />
-              <span>+919629192376</span>
-            </Link>
-            <Link
-              href="mailTo:solaikumar.t@gmail.com"
-              className="flex  text-accent items-center gap-3 text-xl mt-5 "
-            >
-              <IoIosMail className=" size-8 text-white" />
-              <span>Solaikumar.t@gmail.com</span>
-            </Link>
-          </div>
         </div>
       </main>
     </>
