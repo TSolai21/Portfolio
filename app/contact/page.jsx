@@ -7,6 +7,7 @@ import Link from "next/link";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 
 const Page = () => {
   const schema = yup.object().shape({
@@ -21,14 +22,20 @@ const Page = () => {
     resolver: yupResolver(schema),
     mode: "onSubmit",
   });
+  const [isMailSend, setIsMailSend] = useState(false);
 
   const sendMail = async (data) => {
     try {
+      setIsMailSend(true);
       const res = await fetch("api/sendMail", {
         method: "POST",
         body: JSON.stringify(data),
       });
-      console.log(await res.json());
+      const msg = await res.json();
+      if (res.ok) {
+        setIsMailSend(false);
+        toast.success(msg.message);
+      }
       setTimeout(() => {
         reset();
       }, 1000);
@@ -37,13 +44,9 @@ const Page = () => {
     }
   };
 
-  const [data, setData] = useState("");
-  useEffect(() => {
-    if (formState.isValid && formState.isSubmitted) {
-      console.log(data);
-      sendMail(data);
-    }
-  }, [formState, data]);
+  const onSubmit = (data) => {
+    sendMail(data);
+  };
   return (
     <>
       <main className="h-full w-full sm:p-20 p-12  overflow-hidden  z-10 relative">
@@ -78,7 +81,7 @@ const Page = () => {
           </div>
           <form
             className=" flex flex-col gap-5 sm:w-1/2 w-full h-full"
-            onSubmit={handleSubmit((data) => setData(data))}
+            onSubmit={handleSubmit((data) => onSubmit(data))}
           >
             <input
               {...register("name")}
@@ -112,14 +115,16 @@ const Page = () => {
 
             <div className="w-full flex justify-end mt-5">
               <button
+                disabled={isMailSend}
                 type="submit"
                 className=" border   rounded-md text-accent  text-xl p-2 px-4 w-max  border-accent hover:bg-accent hover:text-primary transition text-center"
               >
-                Send Message
+                {isMailSend ? "Sending..." : "Send Message"}
               </button>
             </div>
           </form>
         </div>
+        <Toaster />
       </main>
     </>
   );

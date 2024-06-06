@@ -20,11 +20,11 @@ const Home = () => {
             </p>
           </div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               type: "spring",
-              delay: 1.8,
+              delay: 1,
             }}
             className="content ml-10 flex-grow flex flex-col  justify-center"
           >

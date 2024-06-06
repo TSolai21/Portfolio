@@ -14,6 +14,8 @@ const Page = () => {
           {portfolio.map(({ name, link, image, i }) => {
             return <PortfolioCard key={i} image={image} link={link} />;
           })}
+
+          
         </div>
       </main>
     </>

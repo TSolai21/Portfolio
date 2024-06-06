@@ -13,6 +13,7 @@ import {
 import { CgWebsite } from "react-icons/cg";
 import { MdContacts } from "react-icons/md";
 import Image from "next/image";
+import { IoColorPaletteOutline } from "react-icons/io5";
 
 const Header = () => {
   const navigations = [
@@ -59,10 +60,17 @@ const Header = () => {
 
   const [accent, setAccent] = useState("#08fdd8");
   const handleColor = (e) => {
-    const { value } = e.target;
-    setAccent(value);
+    setAccent(getRandomColor());
   };
 
+  const getRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let randomColor = "#";
+    for (let i = 0; i < 6; i++) {
+      randomColor += letters[Math.floor(Math.random() * 16)];
+    }
+    return randomColor;
+  };
   useEffect(() => {
     document.documentElement.style.setProperty("--accent-color", accent);
   }, [accent]);
@@ -100,12 +108,10 @@ const Header = () => {
             })}
           </ul>
         </nav>
-        <input
-          onInput={handleColor}
-          className="size-10 rounded-full  border-none cursor-pointer overflow-hidden appearance-none"
-          type="color"
-          value={accent}
-        />
+
+        <button className=" text-grey" onClick={handleColor}>
+          <IoColorPaletteOutline className=" size-8" />
+        </button>
         <ul className="flex flex-col gap-6">
           {socialLinks.map((res, i) => {
             return (
