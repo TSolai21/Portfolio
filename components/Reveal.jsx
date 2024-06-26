@@ -20,6 +20,8 @@ export default function Reveal() {
   const reverseIndex = (index) => {
     return 6 - index - 1;
   };
+
+  const name = ["T.", "S", "O", "L", "A", "I"];
   return (
     <AnimatePresence mode="wait">
       <div key={pathname}>
@@ -31,7 +33,7 @@ export default function Reveal() {
             return (
               <motion.div
                 variants={animation}
-                className="h-full w-full relative bg-white"
+                className="h-full w-full relative bg-white flex items-center justify-center"
                 key={i}
                 initial="initial"
                 animate="animate"
@@ -41,7 +43,9 @@ export default function Reveal() {
                   delay: reverseIndex(i) * 0.1,
                   ease: "easeInOut",
                 }}
-              />
+              >
+                <span className="text-8xl text-black">{name[i]}</span>
+              </motion.div>
             );
           })}
         </div>

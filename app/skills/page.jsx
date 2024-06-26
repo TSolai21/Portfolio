@@ -74,10 +74,26 @@ const Page = () => {
               </li>
               <li className="text-white my-3 text-xl">
                 <strong className="text-accent text-2xl border-b pb-1">
+                  Animations and Motion
+                </strong>
+                <ul>
+                  <li className="text-white my-3 text-xl">Framer Motion</li>
+                </ul>
+              </li>
+              <li className="text-white my-3 text-xl">
+                <strong className="text-accent text-2xl border-b pb-1">
                   State Management
                 </strong>
                 <ul>
                   <li className="text-white my-3 text-xl">Redux</li>
+                </ul>
+              </li>
+              <li className="text-white my-3 text-xl">
+                <strong className="text-accent text-2xl border-b pb-1">
+                  Testing
+                </strong>
+                <ul>
+                  <li className="text-white my-3 text-xl">Cypress</li>
                 </ul>
               </li>
               <li className="text-white my-3 text-xl">
