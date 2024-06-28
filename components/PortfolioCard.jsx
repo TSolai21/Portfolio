@@ -40,7 +40,11 @@ const PortfolioCard = ({ image, link, techStack, code }) => {
           </h3>
           <ul className="flex my-2  flex-wrap gap-5">
             {techStack.map((skill) => {
-              return <li className=" text-lg">{skill}</li>;
+              return (
+                <li key={skill} className=" text-lg">
+                  {skill}
+                </li>
+              );
             })}
           </ul>
         </div>
