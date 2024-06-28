@@ -15,6 +15,7 @@ import gitImage from "../public/images/git.webp";
 import githubImage from "../public/images/github.webp";
 import angularImage from "../public/images/angular.webp";
 import portfolio1 from "../public/images/portfolio1.png";
+import portfolio from "../public/images/portfolio.png";
 
 export const imagesSources = {
   htmlImage,
@@ -34,4 +35,5 @@ export const imagesSources = {
   githubImage,
   angularImage,
   portfolio1,
+  portfolio,
 };

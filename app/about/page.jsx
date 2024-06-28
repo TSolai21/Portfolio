@@ -13,7 +13,7 @@ const Page = () => {
         </div>
         <div className="flex  mt-5  w-[100%] sm:w-[90%] justify-between items-center   flex-col-reverse md:flex-row relative  sm:gap-16 bg-secondary sm:p-10 p-7 rounded-xl ">
           <div className="flex flex-col h-full justify-center  sm:items-start items-center sm:text-left text-center w-full  md:w-3/5">
-            <p className="text-white font-mono text-xl mt-3 ">
+            <p className="text-white  text-xl mt-3 ">
               I&apos;m Solaikumar, a Front-End Developer who loves making
               websites that people enjoy using. With 2 years of experience,
               I&apos;m really good with HTML, CSS, and JavaScript the building

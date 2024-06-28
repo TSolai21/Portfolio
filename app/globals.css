@@ -4,11 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: luga;
+  src: url("/fonts/LufgaRegular.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: luga;
 }
 :root {
   --accent-color: #08fdd8;

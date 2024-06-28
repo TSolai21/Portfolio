@@ -3,12 +3,12 @@ import Button from "./Button";
 import { FaCode, FaEye } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-const PortfolioCard = ({ image, link }) => {
+const PortfolioCard = ({ image, link, techStack, code }) => {
   return (
     <>
-      <div className="w-[calc(calc(100%/2)-1.5vw)] group sm:w-[calc(calc(100%/3)-1.5vw)] md:w-[calc(calc(100%/4)-1.5vw)]  flex flex-col  overflow-hidden rounded-xl">
-        <div className=" relative   h-[20em] ">
-          <div className="h-full  absolute inset-0   bg-black opacity-0 bg-opacity-50 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-8">
+      <div className="w-[calc(calc(100%/2)-1.5vw)]   group sm:w-[calc(calc(100%/3)-1.5vw)] md:w-[calc(calc(100%/4)-1.5vw)] bg-secondary   flex flex-col  overflow-hidden rounded-xl p-4">
+        <div className=" relative  h-[10em]  shadow-sm">
+          <div className="h-full  absolute inset-0  opacity-0 bg-opacity-50 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-8">
             <Link
               target="_blank"
               href={link}
@@ -18,7 +18,7 @@ const PortfolioCard = ({ image, link }) => {
             </Link>
             <Link
               target="_blank"
-              href={"/"}
+              href={code}
               className="   translate-y-10 group-hover:translate-y-0 transition flex items-center justify-center"
             >
               <FaCode className=" size-10 text-accent" />
@@ -30,20 +30,18 @@ const PortfolioCard = ({ image, link }) => {
               width={"auto"}
               height={"auto"}
               alt="portfolio image"
-              className=" object-contain"
+              className=" object-cover"
             />
           </div>
         </div>
-        <div className=" text-white p-4 sm:p-4  bg-black py-3 rounded-xl rounded-t-none">
+        <div className=" text-white p-1 h-[8em] flex-grow   py-3 rounded-xl rounded-t-none">
           <h3 className="text-xl uppercase font-bold text-accent">
             Tech Stack
           </h3>
           <ul className="flex my-2  flex-wrap gap-5">
-            <li className=" text-lg">Html</li>
-            <li className=" text-lg">Css</li>
-            <li className=" text-lg">Tailwind</li>
-            <li className=" text-lg">React</li>
-            <li className=" text-lg">Firebase</li>
+            {techStack.map((skill) => {
+              return <li className=" text-lg">{skill}</li>;
+            })}
           </ul>
         </div>
       </div>

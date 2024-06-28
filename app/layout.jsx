@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       />
 
       <body className={inter.className}>
-        <div className="app bg-primary h-[100vh] w-full flex">
+        <div className="app bg-primary h-[100dvh] w-full flex">
           {/* <input id="toggler" type="checkbox" className="peer hidden" />
           <label
             htmlFor="toggler"

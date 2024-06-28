@@ -29,7 +29,7 @@ const Home = () => {
             className="content ml-10 flex-grow flex flex-col  justify-center"
           >
             <p className=" text-grey font-cursive ml-2 text-3xl sm:text-2xl mb-4">
-              &lt;content&gt;
+              &lt;main&gt;
             </p>
             <h1 className="text-white sm:text-8xl text-6xl">
               Hi, <br />
@@ -46,7 +46,7 @@ const Home = () => {
             </Link>
 
             <p className=" text-grey font-cursive ml-2 text-3xl sm:text-2xl mt-4">
-              &lt;/content&gt;
+              &lt;/main&gt;
             </p>
           </motion.div>
 

@@ -63,4 +63,12 @@ export const skills = [
     skill: "GitHub",
     image: imagesSources.githubImage,
   },
+  {
+    skill: "Cypress",
+    image: imagesSources.githubImage,
+  },
+  {
+    skill: "Framer Motion",
+    image: imagesSources.githubImage,
+  },
 ];

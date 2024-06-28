@@ -22,87 +22,87 @@ const Page = () => {
 
           <div className="w-1/2 max-md:w-full max-sm:flex-col  flex">
             <ul className="w-1/2 max-md:w-full">
-              <li className="text-white my-3">
-                <strong className="text-accent text-2xl  border-b pb-1">
+              <li className="text-grey my-3">
+                <strong className="text-white text-2xl border-accent  border-b pb-1">
                   Core Web Technologies
                 </strong>
 
                 <ul>
-                  <li className="text-white my-3 text-xl">HTML</li>
-                  <li className="text-white my-3 text-xl">CSS</li>
+                  <li className="text-grey my-3 text-xl">HTML</li>
+                  <li className="text-grey my-3 text-xl">CSS</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Preprocessors and Frameworks
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">Sass</li>
-                  <li className="text-white my-3 text-xl">Bootstrap</li>
-                  <li className="text-white my-3 text-xl">Tailwind</li>
+                  <li className="text-grey my-3 text-xl">Sass</li>
+                  <li className="text-grey my-3 text-xl">Bootstrap</li>
+                  <li className="text-grey my-3 text-xl">Tailwind</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Responsive Design
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">Responsiveness</li>
+                  <li className="text-grey my-3 text-xl">Responsiveness</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Programming Languages
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">JavaScript</li>
-                  <li className="text-white my-3 text-xl">TypeScript</li>
+                  <li className="text-grey my-3 text-xl">JavaScript</li>
+                  <li className="text-grey my-3 text-xl">TypeScript</li>
                 </ul>
               </li>
             </ul>
             <ul className="w-1/2 max-md:w-full">
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Libraries and Frameworks
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">JQuery</li>
-                  <li className="text-white my-3 text-xl">React</li>
-                  <li className="text-white my-3 text-xl">Next.js</li>
-                  <li className="text-white my-3 text-xl">Angular</li>
+                  <li className="text-grey my-3 text-xl">JQuery</li>
+                  <li className="text-grey my-3 text-xl">React</li>
+                  <li className="text-grey my-3 text-xl">Next.js</li>
+                  <li className="text-grey my-3 text-xl">Angular</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Animations and Motion
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">Framer Motion</li>
+                  <li className="text-grey my-3 text-xl">Framer Motion</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   State Management
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">Redux</li>
+                  <li className="text-grey my-3 text-xl">Redux</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Testing
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">Cypress</li>
+                  <li className="text-grey my-3 text-xl">Cypress</li>
                 </ul>
               </li>
-              <li className="text-white my-3 text-xl">
-                <strong className="text-accent text-2xl border-b pb-1">
+              <li className="text-grey my-3 text-xl">
+                <strong className="text-white text-2xl border-accent border-b pb-1">
                   Version Control and Collaboration
                 </strong>
                 <ul>
-                  <li className="text-white my-3 text-xl">Git</li>
-                  <li className="text-white my-3 text-xl">GitHub</li>
+                  <li className="text-grey my-3 text-xl">Git</li>
+                  <li className="text-grey my-3 text-xl">GitHub</li>
                 </ul>
               </li>
             </ul>

@@ -21,7 +21,9 @@ export default function Reveal() {
     return 6 - index - 1;
   };
 
-  const name = ["T.", "S", "O", "L", "A", "I"];
+  const name = ["✦", "K", "U", "M", "A", "R", "✦"];
+  // const name = ["L", "O", "A", "D", "I", "N", "G"];
+  // const name = ["W", "E", "L", "C", "O", "M", "E"];
   return (
     <AnimatePresence mode="wait">
       <div key={pathname}>
@@ -29,7 +31,7 @@ export default function Reveal() {
           key={pathname}
           className=" h-screen  w-screen z-40 flex fixed pointer-events-none  left-0 top-0 right-0"
         >
-          {Array.from({ length: 6 }).map((_, i) => {
+          {Array.from({ length: 7 }).map((_, i) => {
             return (
               <motion.div
                 variants={animation}
