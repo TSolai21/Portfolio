@@ -21,9 +21,10 @@ export default function Reveal() {
     return 6 - index - 1;
   };
 
-  const name = ["✦", "K", "U", "M", "A", "R", "✦"];
+  // const name = ["✦", "K", "U", "M", "A", "R", "✦"];
   // const name = ["L", "O", "A", "D", "I", "N", "G"];
   // const name = ["W", "E", "L", "C", "O", "M", "E"];
+  const name = [];
   return (
     <AnimatePresence mode="wait">
       <div key={pathname}>

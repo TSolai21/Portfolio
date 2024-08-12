@@ -3,7 +3,9 @@ import Button from "./Button";
 import { FaCode, FaEye } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-const PortfolioCard = ({ image, link, techStack, code }) => {
+import { GrInProgress } from "react-icons/gr";
+
+const PortfolioCard = ({ image, link, techStack, code, name, completed }) => {
   return (
     <>
       <div className="w-[calc(calc(100%/2)-1.5vw)]   group sm:w-[calc(calc(100%/3)-1.5vw)] md:w-[calc(calc(100%/4)-1.5vw)] bg-secondary   flex flex-col  overflow-hidden rounded-xl p-4">
@@ -23,6 +25,8 @@ const PortfolioCard = ({ image, link, techStack, code }) => {
             >
               <FaCode className=" size-10 text-accent" />
             </Link>
+
+            {!completed && <GrInProgress className=" size-8 text-accent" />}
           </div>
           <div className="h-full overflow-hidden">
             <Image
@@ -34,10 +38,9 @@ const PortfolioCard = ({ image, link, techStack, code }) => {
             />
           </div>
         </div>
-        <div className=" text-white p-1 h-[8em] flex-grow   py-3 rounded-xl rounded-t-none">
-          <h3 className="text-xl uppercase font-bold text-accent">
-            Tech Stack
-          </h3>
+        <div className=" text-white p-1 h-[9em] flex-grow   py-3 rounded-xl rounded-t-none">
+          <h3 className="text-xl uppercase font-bold text-accent">{name}</h3>
+          <h3 className="text-l uppercase font-bold text-accent">Tech Stack</h3>
           <ul className="flex my-2  flex-wrap gap-5">
             {techStack.map((skill) => {
               return (

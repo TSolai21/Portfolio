@@ -11,17 +11,21 @@ const Page = () => {
           </h1>
         </div>
         <div className="flex  h-full  mt-5 gap-5 flex-wrap items-start overflow-auto pb-8">
-          {portfolio.map(({ name, link, image, i, techStack, code }) => {
-            return (
-              <PortfolioCard
-                key={i}
-                image={image}
-                link={link}
-                techStack={techStack}
-                code={code}
-              />
-            );
-          })}
+          {portfolio.map(
+            ({ name, link, image, i, techStack, code, completed }) => {
+              return (
+                <PortfolioCard
+                  key={i}
+                  image={image}
+                  link={link}
+                  techStack={techStack}
+                  code={code}
+                  name={name}
+                  completed={completed}
+                />
+              );
+            }
+          )}
         </div>
       </main>
     </>
