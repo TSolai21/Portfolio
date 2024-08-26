@@ -22,13 +22,13 @@ const Page = () => {
               cooler. My goal is to create websites that are easy to use and
               look great, so everyone has a great time surfing the web.
             </p>
-            <Link
-              href={"/"}
+            <a
+              href={"Solaikumar_CV.pdf"}
               download
               className=" border rounded-md text-accent text-xl p-1 min-w-[8em] w-[8vw] mt-8 border-accent hover:bg-accent hover:text-primary transition text-center"
             >
               Download CV
-            </Link>
+            </a>
           </div>
           <div className=" w-[15vw]  min-w-40 !max-h-90  relative   border-[15px] border-l-0 border-t-0  border-accent  rounded-full  overflow-hidden ">
             <Image
